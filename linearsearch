@@ -1,0 +1,17 @@
+Cari “a” dari deret huruf di bawah ini menggunakan metode searching linear search! 
+y  u  i  w  o  a  q  u  j  p
+
+def LinearSearch(list, item):#linearserch
+  index = 0
+  found = False
+
+  while index < len(list) and found is False:  # Perubahan di sini: ganti "found is False" menjadi "not found"
+    if list[index] == item:
+      found = True
+    else:
+      index = index + 1  # Perubahan di sini: pemindahan peningkatan indeks ke dalam else
+
+  return found
+
+list = ['y', 'u', 'i', 'w', 'o', 'a', 'q', 'u', 'j', 'p']
+print(LinearSearch(list, 'a'))
