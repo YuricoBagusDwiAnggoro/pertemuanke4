@@ -1,0 +1,14 @@
+#Urutkan deret bilangan di bawah ini menggunakan metode sorting insertion sort! 
+89  12  57  16  25  11  75
+
+def InsertionSort(listt):
+    for i in range(1, len(listt)):
+        j = i - 1
+        next = listt[i]
+        while (listt[j] > next) and (j >= 0):
+            listt[j + 1] = listt[j]
+            j = j - 1
+        listt[j + 1] = next
+    return listt
+listt = [89,12,57,16,25,11,75]
+InsertionSort(listt)
