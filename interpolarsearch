@@ -1,0 +1,18 @@
+Cari “u” dari deret huruf di bawah ini menggunakan metode searching interpolation search! 
+y  u  i  w  o  a  q  u  j  p
+
+def IntPolSearch(my_list, x):
+    idx0 = 0
+    idxn = len(my_list) - 1
+    found = False
+    while idx0 <= idxn and x >= my_list[idx0] and x <= my_list[idxn]:
+        mid = idx0 + int(((float(idxn - idx0) / (my_list[idxn] - my_list[idx0])) * (x - my_list[idx0])))
+        if my_list[mid] == x:
+            found = True
+            return found
+        if my_list[mid] < x:
+            idx0 = mid + 1
+    return found
+    my_list = ['y', 'u', 'i', 'w', 'o', 'a', 'q', 'u', 'j', 'p']
+result = IntPolSearch(my_list, 'u')
+print(result)
